@@ -58,10 +58,14 @@ public class Main {
         Files.writeString(filePath2, "Ten sam napis");
 
         System.out.println(Files.mismatch(filePath1, filePath2));  //Zwraca -1, ponieważ oba pliki mają taką samą zawartość
+        System.out.println(Files.readString(filePath1));
+        System.out.println(Files.readString(filePath2));
 
         Files.writeString(filePath1, "Ten sam napis");
         Files.writeString(filePath2, "Jakis inny napis");
 
         System.out.println(Files.mismatch(filePath1, filePath2));  //Zwraca 0, ponieważ pliki różnią się zawartością
+        System.out.println(Files.readString(filePath1));
+        System.out.println(Files.readString(filePath2));
     }
 }
